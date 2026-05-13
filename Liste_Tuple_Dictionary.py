@@ -1,12 +1,3 @@
-# =========================================
-# LISTE + TUPLE + DICTIONARY ZUSAMMEN
-# MINI-SPIELBEISPIEL
-# =========================================
-
-
-# -----------------------------------------
-# SPIELER (DICTIONARY)
-# -----------------------------------------
 
 player = {
     "name": "Mario",
@@ -15,18 +6,7 @@ player = {
     "inventory": ["Schwert", "Trank", "Schild"]
 }
 
-
-# -----------------------------------------
-# POSITION (TUPLE)
-# -----------------------------------------
-
 player_position = (150, 300)
-
-
-# -----------------------------------------
-# GEGNERLISTE
-# LISTE MIT DICTIONARIES
-# -----------------------------------------
 
 enemies = [
     {
@@ -48,11 +28,6 @@ enemies = [
     }
 ]
 
-
-# =========================================
-# SPIELERDATEN
-# =========================================
-
 print("SPIELER:")
 print(player)
 
@@ -62,31 +37,16 @@ print(player["name"])
 print("\nInventar:")
 print(player["inventory"])
 
-
-# =========================================
-# LISTE VERÄNDERN
-# =========================================
-
 player["inventory"].append("Bogen")
 
 print("\nNeues Inventar:")
 print(player["inventory"])
-
-
-# =========================================
-# TUPLE VERWENDEN
-# =========================================
 
 x, y = player_position
 
 print("\nSPIELER POSITION:")
 print("X:", x)
 print("Y:", y)
-
-
-# =========================================
-# GEGNER DURCHGEHEN
-# =========================================
 
 print("\nGEGNER:")
 
@@ -98,7 +58,6 @@ for enemy in enemies:
     print("Leben:")
     print(enemy["health"])
 
-    # Tuple auspacken
     enemy_x, enemy_y = enemy["position"]
 
     print("Position X:")
@@ -107,39 +66,19 @@ for enemy in enemies:
     print("Position Y:")
     print(enemy_y)
 
-
-# =========================================
-# SCHADEN MACHEN
-# =========================================
-
 enemies[0]["health"] -= 20
 
 print("\nGoblin nach Schaden:")
 print(enemies[0])
 
-
-# =========================================
-# SLICING
-# =========================================
-
 print("\nErste zwei Inventaritems:")
 print(player["inventory"][0:2])
-
-
-# =========================================
-# UPPER + CAPITALIZE
-# =========================================
 
 print("\nUpper:")
 print(player["name"].upper())
 
 print("\nCapitalize:")
 print(enemies[2]["name"].capitalize())
-
-
-# =========================================
-# LEN
-# =========================================
 
 print("\nAnzahl Gegner:")
 print(len(enemies))
